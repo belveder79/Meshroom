@@ -21,6 +21,7 @@ The transformation can be based on:
  * from_markers: Align specific markers to custom coordinates
  * from_gps: Align with the gps positions from the image metadata
  * align_ground: Detect ground level and align to it
+ * from_gps2utm: Use local metric UTM coordinate system and invert axes to match x/y/z right/up/sky
 
 '''
 
@@ -47,8 +48,9 @@ The transformation can be based on:
                         " - from_markers: Defines the coordinate system from markers specified by --markers.\n"
                         " - from_gps: Defines coordinate system from GPS metadata.\n"
                         " - align_ground: Defines ground level from the point cloud density. It assumes that the scene is oriented.",
+                        " - from_gps2utm: Converts reconstruction into local UTM coordinate system and inverts axes to match x/y/z right/up/sky definition."
             value="auto",
-            values=["transformation", "manual", "auto", "auto_from_cameras", "auto_from_cameras_x_axis", "auto_from_landmarks", "from_single_camera", "from_center_camera", "from_markers", "from_gps", "align_ground"],
+            values=["transformation", "manual", "auto", "auto_from_cameras", "auto_from_cameras_x_axis", "auto_from_landmarks", "from_single_camera", "from_center_camera", "from_markers", "from_gps", "align_ground", "from_gps2utm"],
             exclusive=True,
             uid=[0],
         ),
